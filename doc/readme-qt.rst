@@ -43,26 +43,27 @@ Windows build instructions:
 .. _`QT Windows SDK`: http://qt-project.org/downloads
 
 
-Mac OS X
---------
+Mac build instructions:
 
-- Download and install the `Qt Mac OS X SDK`_. It is recommended to also install Apple's Xcode with UNIX tools.
+- Install `Homebrew`_
 
-- Download and install `MacPorts`_.
-
-- Execute the following commands in a terminal to get the dependencies:
-
+- Install brew packages
 ::
 
-	sudo port selfupdate
-	sudo port install boost db48 miniupnpc
+	brew install miniupnpc　　
+	brew install openssl@1.1　　
+	brew install qt
+    brew install boost@1.60　　
 
+- then execute the following:
+::
+
+	qmake
+	make
+	
 - Open the .pro file in Qt Creator and build as normal (cmd-B)
 
-.. _`Qt Mac OS X SDK`: http://qt-project.org/downloads
-.. _`MacPorts`: http://www.macports.org/install.php
-
-
+.. _`Homebrew`: https://brew.sh/index
 Build configuration options
 ============================
 
